@@ -33,15 +33,15 @@ def init_core_module(app):
     # 缓存
     app.config.from_object(ConfDictToClass(SITE_CONFIG["cache"]))
     app.config["CACHE_REDIS"] = redis
-    # cache.init_app(app)
+    cache.init_app(app)
 
     # 最大请求大小
     app.config["MAX_CONTENT_LENGTH"] = SITE_CONFIG["system"]["MAX_CONTENT_LENGTH"] * 1024 * 1024
     # Session会话配置
     app.config.from_object(ConfDictToClass(SITE_CONFIG["session"]))
     app.config["SESSION_REDIS"] = redis
-    # session.init_app(app)
-    # rest_session.init_app(app)
+    session.init_app(app)
+    rest_session.init_app(app)
 
     # Csrf token
     csrf.init_app(app)
