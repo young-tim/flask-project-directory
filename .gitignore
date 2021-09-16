@@ -1,0 +1,13 @@
+.DS_Store
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+apps/configs/config.py
+apps/configs/db_config.py
+apps/configs/site_config.py
+apps/static/upload/
+# migrations/
+logs/
+
